@@ -1,5 +1,5 @@
-<p>Total: {{ list.total }}</p>
+<p>Total: {{ items.length }}</p>
 <app-zone-disable-list-item
-  *ngFor="let item of list.items; trackBy: trackItem"
+  *ngFor="let item of items; trackBy: trackItem"
   [item]="item"
 ></app-zone-disable-list-item>

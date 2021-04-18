@@ -9,6 +9,7 @@ import { map, takeUntil, tap, debounceTime } from 'rxjs/operators';
 import { ZoneDisableList } from './model/zone-disable-list.interface';
 import { ZoneDisableState } from './model/zone-disable-state.itnerface';
 import { guitaristsList } from './utils/guitarists-list.constant';
+import {ZoneDisableListItem} from "./model/zone-disable-list-item.interface";
 
 @Component({
   selector: 'zone-disable',
@@ -24,15 +25,12 @@ export class ZoneDisableComponent implements OnDestroy {
     search: '',
   });
 
-  list$: Observable<ZoneDisableList> = this.state$.pipe(
+  list$: Observable<ZoneDisableListItem[]> = this.state$.pipe(
     map((state) => {
       const items = state.items?.filter((i) =>
         i.name?.toLowerCase().includes(state.search?.toLowerCase())
       );
-      return {
-        items,
-        total: items.length,
-      };
+      return items;
     })
   );
 

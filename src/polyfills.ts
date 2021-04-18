@@ -11,7 +11,7 @@
  *
  * Zone-flags configuration over import
  */
-// import './zone-flags';
+import './zone-flags';
 
 
 

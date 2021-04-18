@@ -3,5 +3,5 @@
   <app-zone-disabled-search
     (search)="searchEvent$.next($event)"
   ></app-zone-disabled-search>
-  <app-zone-disable-list [list]="list$ | async"></app-zone-disable-list>
+  <app-zone-disable-list [items]="list$ | async"></app-zone-disable-list>
 </div>

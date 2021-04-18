@@ -1,11 +1,5 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  Input,
-  Output,
-  ElementRef,
-} from '@angular/core';
-import { ZoneDisableListItem } from '../model/zone-disable-list-item.interface';
+import {ChangeDetectionStrategy, Component, ElementRef, Input,} from '@angular/core';
+import {ZoneDisableListItem} from '../model/zone-disable-list-item.interface';
 
 @Component({
   selector: 'app-zone-disable-list-item',
@@ -16,14 +10,13 @@ import { ZoneDisableListItem } from '../model/zone-disable-list-item.interface';
 export class ZoneDisableListItemComponent {
   @Input() item: ZoneDisableListItem;
   elem: HTMLElement;
+
   constructor(private element: ElementRef) {
     this.elem = element.nativeElement;
-    // requestAnimationFrame(() => {
-    //   let date;
-    //   for (let i = 0; i < 10000; i++) {
-    //     date = new Date();
-    //   }
-    // });
+    let date;
+    for (let i = 0; i < 5000; i++) {
+      date = new Date();
+    }
   }
 
   changeColor() {
