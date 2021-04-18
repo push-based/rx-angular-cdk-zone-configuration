@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { EagerContainerComponent } from './eager-container.component';
-import {ZoneFlagExamplesModule} from "../examples/zone-flag-examples.module";
-
+import { ZoneFlagExamplesModule } from '../examples/zone-flag-examples.module';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       {
         path: 'eager',
-        component: EagerContainerComponent
-      }
+        component: EagerContainerComponent,
+      },
     ]),
-    ZoneFlagExamplesModule
+    ZoneFlagExamplesModule,
   ],
-  declarations: [EagerContainerComponent]
+  declarations: [EagerContainerComponent],
 })
 export class EagerLoadedModule {}

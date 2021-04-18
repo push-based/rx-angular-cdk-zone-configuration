@@ -1,16 +1,17 @@
-import { Component, VERSION } from "@angular/core";
+import { Component, VERSION } from '@angular/core';
 
 @Component({
-  selector: "my-app",
+  selector: 'my-app',
   template: `
-    <ul>
-      <li><a routerLink="eager">eager</a></li>
-      <li><a routerLink="lazy">lazy</a></li>
-    </ul>
-
-    <router-outlet></router-outlet>
-  `
+    <div class="tabs">
+      <a routerLink="eager" class="padding mr button">eager module</a>
+      <a routerLink="lazy" class="padding button">lazy module</a>
+    </div>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  `,
 })
 export class AppComponent {
-  name = "Angular " + VERSION.major;
+  name = 'Angular ' + VERSION.major;
 }

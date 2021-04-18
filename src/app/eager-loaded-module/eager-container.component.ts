@@ -1,7 +1,7 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: "eager-container",
+  selector: 'eager-container',
   template: `
     <h1>Eager {{ name }}!</h1>
 
@@ -9,7 +9,8 @@ import { Component, Input } from "@angular/core";
     <xhr></xhr>
     <timer-api></timer-api>
     <ui-events></ui-events>
-  `
+    <zone-disable></zone-disable>
+  `,
 })
 export class EagerContainerComponent {
   name: string;

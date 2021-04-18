@@ -1,4 +1,129 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #eff2f4;
+  color: #4a4a4a;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+h2 {
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+  max-width: 800px;
+}
+
 input {
-  background: hotpink;
+  border: 1px solid #cccbcb;
+  border-radius: 5px;
+  display: block;
+  padding: 6px 10px 9px 10px;
+  line-height: 1;
+  font-size: 14px;
+  background: none;
+  transition: none;
+  background: #fff;
+  width: 100%;
+  height: 36px;
+  min-height: 36px;
+}
+
+.padding {
+  padding: 16px;
+}
+
+.padding-sm {
+  padding: 8px;
+}
+
+.button {
+  line-height: 1;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  will-change: transform;
+  background: #2e74c4;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 200ms ease-in-out;
+
+  &:hover {
+    box-shadow: none;
+    transform: translateY(1px);
+  }
+
+  &.outlined {
+    background: #fff;
+    border: 2px solid #2e74c4;
+    color: #2e74c4;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 5px;
+  flex-direction: column;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.list-item {
+  padding: 16px;
+  border-bottom: 1px solid #cccbcb;
+  font-weight: bold;
+  transition: color 100ms ease-in-out;
+}
+
+.flex {
+  display: flex;
+
+  &.align-center {
+    align-content: center;
+  }
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+}
+
+.tabs {
+  display: flex;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml {
+  margin-left: 16px;
+}
+
+.mr {
+  margin-right: 16px;
+}
+
+.mb {
+  margin-bottom: 16px;
+}
+
+.mt {
+  margin-top: 16px;
 }

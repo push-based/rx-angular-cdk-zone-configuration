@@ -1,0 +1,7 @@
+<div class="card">
+  <h2>Keydown, mousemove <dirty-checks></dirty-checks></h2>
+  <app-zone-disabled-search
+    (search)="searchEvent$.next($event)"
+  ></app-zone-disabled-search>
+  <app-zone-disable-list [list]="list$ | async"></app-zone-disable-list>
+</div>
