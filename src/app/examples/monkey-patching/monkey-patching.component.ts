@@ -15,13 +15,14 @@ import { Component, OnInit } from '@angular/core';
       >
         Monkey patch click
       </button>
-      <button [unpatch] (click)="noop()" class="button outlined padding-sm">
-        test by click
+      <button (click)="noop()" class="button outlined padding-sm">
+        test guess {{num}}
       </button>
     </div>
   `,
 })
 export class MonkeyPatchingComponent implements OnInit {
+  num = 0;
   constructor() {}
 
   patchClickListener(): void {
@@ -40,6 +41,7 @@ export class MonkeyPatchingComponent implements OnInit {
   noop() {
     // No operation
     console.log('noop');
+    ++this.num;
   }
 
   ngOnInit(): void {}
