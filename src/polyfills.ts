@@ -3,7 +3,7 @@
  *
  * Zone-flags configuration inline
  */
-// window
+// (window as any).__Zone_disable_timers = true;
 
 
 /**
